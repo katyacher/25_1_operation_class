@@ -12,12 +12,12 @@ Point::Point(double x_, double y_){
 }
 
 void Point::input(){
-    std::cout << "Enter the coordinates (x, y): ";
+    std::cout << "Input (x, y): ";
     std::cin >> x >> y;
 }
 
 void Point::print(){
-    std::cout << "(" << x << ", " << y  << ")" << std::endl;
+    std::cout << "(" << x << ", " << y  << ")";
 }
     
 bool Point::operator==(Point& B) {

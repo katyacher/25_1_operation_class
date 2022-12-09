@@ -10,13 +10,15 @@ int main() {
     std::cout << "Start command: scalpel" << std::endl;
 
     Point p_begin, p_end;
+    std::cout << "Enter the start point:" << std::endl;
     p_begin.input();
+    std::cout << "Enter the finish point:" << std::endl;
     p_end.input();
 
     scalpel(p_begin, p_end);
 
     while(true){
-        std::cout << "Enter the next command: ";
+        std::cout << "\nEnter the next command: ";
         std::string command;
         std::cin >> command;
 
@@ -30,7 +32,9 @@ int main() {
             tweezers(pinch_point);
         } else if(command == "suture"){
             Point sp_begin, sp_end;
+             std::cout << "Enter the start point:" << std::endl;
             sp_begin.input();
+            std::cout << "Enter the finish point:" << std::endl;
             sp_end.input();
             if(p_begin == sp_begin && p_end == sp_end) {
                 suture(sp_begin, sp_end);
@@ -41,6 +45,6 @@ int main() {
         }
     }
 
-    std::cout << "Operation finished!" << std::endl;
+    std::cout << "\nOperation finished!" << std::endl;
     return 0;
 }
